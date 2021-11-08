@@ -32,3 +32,9 @@ img {
 table {
     padding: 1% 15% 15% 15%;
 }
+
+.arriba {
+    text-align: right;
+    padding-bottom: 2rem;
+    padding-right: 10%;
+}
