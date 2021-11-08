@@ -34,7 +34,7 @@
         </div>
     </nav>
     <main class=texto>
-        <h1>Uso de eventos</h1> <br>
+        <h1 class="titulo">Uso de eventos</h1> <br>
         <p>Una vez descrito cómo los drivers almacenan los paquetes de información es imperioso explicar que luego lo que hacen es generar eventos, que son líneas de código predefinidas en el Kernel del Sistema Operativo.</p><br>
         <img src="./images/image3.png" class="img-fluid" alt="estructura de eventos"><br>
         <p>Los trackpads viejos sólo proveen información de posición relativa y crean eventos de mouse, tales como: REL_{X,Y} que reporta movimiento relativo, BTN_LEFT que reporta presión de botón izquierdo y BTN_{MIDDLE,RIGHT,4,5,etc.} que reporta presión
@@ -50,7 +50,7 @@
             BTN_TOOL_QUADTAP: Estos códigos detonan una, dos, tres, y cuatro interacciones de dedos en el pad. Por ejemplo, si el usuario usa dos dedos y los mueve por el pad en un esfuerzo por moverse por el contenido en pantalla, el BTN_TOOL_DOUBLETAP
             deberia obtener el valor 1 por la duración del movimiento. Nota que todos los códigos BTN_TOOL_ y los códigos BTN_TOUCH son ortogonales a propósito. Los eventos del pad son generados por el toque de los dedos y estos eventos deberían ser uno
             por cada grupo de codigo. La mayoría solo tiene uno de estos códigos BTN_TOOL teniendo un valor de 1 durante cualquier cuadro de sincronización. <br> </p> <br>
-        <h2>Protocolo multitáctil y eventos:</h2>
+        <h2 class="titulo">Protocolo multitáctil y eventos:</h2>
         <p>
             Los detalles del contacto son enviados de manera secuencial como paquetes separados de eventos ABS_MT. Solo los eventos ABS_MT son reconocidos como parte de un paquete de contacto. Ya que estos eventos son ignorados por las aplicaciones de “single-touch”
             (ST), el protocolo MT pueden ser implementado en sistemas ST ya existentes. <br> Los drivers de dispositivos de tipo A separan los paquetes de contacto llamando a input_sync() al final de cada paquete. Esto genera un evento SYN_MT_REPORT,
